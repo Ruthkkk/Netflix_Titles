@@ -7,35 +7,35 @@ The dataset was gotten from Kaggle https://www.kaggle.com/datasets/shivamb/netfl
 # Excel and Sql was used on this project
 # Excel:
 The data was very messy so I used excel to to do some data cleaning such as removing unwanted columns and blank spaces. I also did quote a lot of find and replace to corect some spellings such as:
-√© replaced with é
-√º- replaced with u
-√° replaced with a
-ƒ± replaced with i
-ƒü replaced with a
-√≠ replaced with I
-√≥ replaced with ó
-ƒ± replaced with I
-√∂ replaced with o
-√ñ replaced with o
-√ß replaced with c
-√± Replaced with n
-ƒÖ replaced with a
-≈Ç replaced with eL
-ƒ∞ replaced with I
-√® replaced with è
-√¥ replaced with ô
-√´ replaced ë
-√∫ replaced with u
-√• replaced with å
-√Å replaced with å
-√∏ replaced with ø
-Æ replaced with ô
-≈º replaced with ż
-√¶ replaced with ae
-√Ø replaced with i
-√ò replaced with ø
-√£ replaced with ã
-√° replaced with a
+√© replaced with é,
+√º- replaced with u,
+√° replaced with a,
+ƒ± replaced with i,
+ƒü replaced with a,
+√≠ replaced with I,
+√≥ replaced with ó,
+ƒ± replaced with I,
+√∂ replaced with o,
+√ñ replaced with o,
+√ß replaced with c,
+√± Replaced with n,
+ƒÖ replaced with a,
+≈Ç replaced with eL,
+ƒ∞ replaced with I,
+√® replaced with è,
+√¥ replaced with ô,
+√´ replaced ë,
+√∫ replaced with u,
+√• replaced with å,
+√Å replaced with å,
+√∏ replaced with ø,
+Æ replaced with ô,
+≈º replaced with ż,
+√¶ replaced with ae,
+√Ø replaced with i,
+√ò replaced with ø,
+√£ replaced with ã,
+√° replaced with a,
 √â replaced with e
 
 # SQL
