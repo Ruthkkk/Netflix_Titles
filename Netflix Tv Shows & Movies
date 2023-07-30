@@ -1,0 +1,76 @@
+--This data sets contains Netflix and Tv shows 
+--This dataset consists of listings of all the movies and tv shows available on Netflix, along with details such as - cast, directors, ratings, release year, duration up to mid 2021
+
+-- Selecting all from the Netflix
+SELECT *
+FROM [Netflix ] 
+
+-- TV SHOWS In Netflix
+SELECT *
+FROM [Netflix ] 
+WHERE [type] = 'TV Show';
+
+-- Movies on Netflix
+SELECT *
+FROM [Netflix ] 
+WHERE [type] = 'Movie';
+
+--How many shows and movies are available on Netflix?
+SELECT type, COUNT(type) AS CountOfContent
+FROM [Netflix ]
+GROUP BY [type];
+
+
+--What are the top 10 countries with the most content available on Netflix?
+SELECT TOP 10 country 
+FROM [Netflix ]; 
+
+
+--How many TV shows and movies are available in each content rating category (e.g., TV-MA, TV-PG, PG-13)?
+SELECT rating, type, COUNT([type]) as CountOfContent 
+FROM [Netflix ]
+WHERE rating IN ('TV-MA', 'TV-PG', 'PG-13')
+GROUP BY type, rating
+ORDER BY CountOfContent DESC;
+
+
+--What are the top 10 genres or categories of content available on Netflix?
+SELECT TOP 10 listed_in
+FROM [Netflix ]
+
+
+--How many shows and movies were released in each year? Are there any trends over the years?
+SELECT type, release_year, COUNT([type]) as CountOfContent
+FROM [Netflix ]
+GROUP BY type,release_year
+ORDER BY CountOfContent DESC, release_year DESC;
+
+
+--Which directors have produced the most content on Netflix?
+SELECT director, COUNT(show_id) as CountOfContent
+FROM [Netflix ]
+GROUP BY director
+ORDER BY CountOfContent DESC;
+
+--What is the average duration of TV shows and movies on Netflix?
+-- Calculate average duration of TV shows and movies on Netflix
+SELECT 
+    AVG(
+        CASE
+        WHEN duration LIKE '% min' THEN CAST(SUBSTRING(duration, 1, CHARINDEX(' min', duration) - 1) AS INT)
+        WHEN duration LIKE '% Season%' THEN 0  -- Assuming each season has no duration, you can adjust this if needed
+        END
+    ) AS average_duration_minutes
+FROM [Netflix ];
+
+--Which countries has the most TV shows and movies available?
+SELECT country, type, COUNT(*) AS CountOfContent
+FROM [Netflix ]
+GROUP BY country, [type]
+ORDER BY CountOfContent DESC;
+
+
+--Which TV shows or movies were the director is Marcus Raboy
+SELECT type, title 
+FROM [Netflix ]
+WHERE director LIKE '%Marcus Raboy%';
